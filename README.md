@@ -7,7 +7,8 @@ It is a web page of balls floating on the screen.
 Make bundle with this command
 
 ```
-webpack
+npm install
+npx webpack
 ```
 
 And, open index.html
