@@ -1,6 +1,5 @@
 import * as PIXI from "pixi.js";
 import { randomRange } from "./main";
-import { Color } from "./color";
 
 type App = PIXI.Application<PIXI.ICanvas>;
 
