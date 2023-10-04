@@ -13,4 +13,4 @@ npx webpack
 
 And, open index.html
 
-![index.html](./README/balls.gif)
+https://smiilliin.com/balls
