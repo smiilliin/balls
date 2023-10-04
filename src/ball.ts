@@ -36,9 +36,7 @@ class Ball {
         0xdee6c3, 0xf7e3de, 0xe8e5da, 0xf4d9df, 0xadd1c3, 0xd1eff0, 0xdaeefa,
         0xd4d4e4, 0xd0d2d9,
       ];
-      this.circle.beginFill(
-        colors[Math.floor(randomRange(0, colors.length + 1))]
-      );
+      this.circle.beginFill(colors[Math.floor(randomRange(0, colors.length))]);
     } else {
       this.circle.beginFill(color);
     }
