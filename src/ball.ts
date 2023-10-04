@@ -20,14 +20,28 @@ class Ball {
 
   draw() {}
 
-  constructor(app: App, radius: number = 10) {
+  constructor(
+    app: App,
+    radius: number = 10,
+    color: PIXI.ColorSource | undefined = undefined
+  ) {
     this.radius = radius;
     this.x = randomRange(this.radius, app.renderer.width - this.radius);
     this.y = randomRange(this.radius, app.renderer.height - this.radius);
     this.angle = randomRange(0, toRadian(360));
     this.circle = new PIXI.Graphics();
 
-    this.circle.beginFill(0xffffff);
+    if (!color) {
+      const colors = [
+        0xdee6c3, 0xf7e3de, 0xe8e5da, 0xf4d9df, 0xadd1c3, 0xd1eff0, 0xdaeefa,
+        0xd4d4e4, 0xd0d2d9,
+      ];
+      this.circle.beginFill(
+        colors[Math.floor(randomRange(0, colors.length + 1))]
+      );
+    } else {
+      this.circle.beginFill(color);
+    }
     this.circle.drawCircle(0, 0, this.radius);
     this.circle.endFill();
 
@@ -108,7 +122,7 @@ class Ball {
 }
 class MousePointer extends Ball {
   constructor(app: App) {
-    super(app, 30);
+    super(app, 30, 0xffffff);
   }
   move(x: number, y: number) {
     this.x = x;

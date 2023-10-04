@@ -9,11 +9,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "pixi.js": "^7.3.1"
-  },
   "devDependencies": {
     "ts-loader": "^9.4.4",
     "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "pixi.js": "^7.3.1"
   }
 }
